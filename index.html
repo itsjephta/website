@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jephta Mutashi | Analytical Chemistry Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        science: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            light: '#fdba74',
+                            DEFAULT: '#f97316',
+                            dark: '#c2410c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom utilities if needed */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-science-50 text-slate-800 antialiased selection:bg-science-500 selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-white" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-science-900 tracking-tight">JEPHTA<span
+                            class="text-science-500">.</span></a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about"
+                        class="text-slate-600 hover:text-science-700 font-medium transition-colors">About</a>
+                    <a href="#expertise"
+                        class="text-slate-600 hover:text-science-700 font-medium transition-colors">Expertise</a>
+                    <a href="#standards"
+                        class="text-slate-600 hover:text-science-700 font-medium transition-colors">Standards</a>
+                    <a href="#portfolio"
+                        class="text-slate-600 hover:text-science-700 font-medium transition-colors">Portfolio</a>
+                    <a href="#contact"
+                        class="px-5 py-2.5 bg-science-700 text-white rounded-full font-medium hover:bg-science-900 transition-colors shadow-lg shadow-science-500/30">Contact
+                        Me</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-science-900 focus:outline-none p-2">
+                        <svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about"
+                    class="block py-3 px-3 rounded-md text-base font-medium text-slate-700 hover:bg-science-50 hover:text-science-700">About</a>
+                <a href="#expertise"
+                    class="block py-3 px-3 rounded-md text-base font-medium text-slate-700 hover:bg-science-50 hover:text-science-700">Expertise</a>
+                <a href="#standards"
+                    class="block py-3 px-3 rounded-md text-base font-medium text-slate-700 hover:bg-science-50 hover:text-science-700">Standards</a>
+                <a href="#portfolio"
+                    class="block py-3 px-3 rounded-md text-base font-medium text-slate-700 hover:bg-science-50 hover:text-science-700">Portfolio</a>
+                <a href="#contact"
+                    class="block py-3 px-3 mt-4 text-center rounded-md text-base font-medium bg-science-700 text-white hover:bg-science-900">Contact
+                    Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+            <!-- Decorative Hexagons -->
+            <svg class="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/4" width="600" height="600"
+                viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#0ea5e9"
+                    d="M48.3,-58.5C61.4,-47.5,69.9,-30.7,73.5,-12.9C77.1,4.9,75.8,23.7,66.6,39.6C57.4,55.5,40.3,68.5,22.1,72.9C3.9,77.3,-15.4,73.1,-32.1,63.9C-48.8,54.7,-62.9,40.5,-70.4,23.5C-77.9,6.5,-78.8,-13.3,-70.6,-30.2C-62.4,-47.1,-45.1,-61.1,-28.9,-69.8C-12.7,-78.5,4.7,-81.9,20.4,-77.9C36.1,-73.9,50,-62.5,48.3,-58.5Z"
+                    transform="translate(100 100)" />
+            </svg>
+            <svg class="absolute bottom-0 left-0 transform -translate-x-1/3 translate-y-1/4 text-science-300"
+                width="400" height="400" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-science-100 text-science-700 text-sm font-semibold tracking-wide mb-4">PORTFOLIO</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-4">
+                    Jephta <br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-science-500 to-science-900">Mutashi</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-500 font-light mb-8">
+                    Analytical Chemistry Major
+                </p>
+                <p class="text-lg text-slate-600 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Dedicated to precision and discovery in the chemical sciences. Specializing in quantitative
+                    analysis, standardization, and quality control through advanced modern techniques.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#about"
+                        class="px-8 py-4 bg-science-700 text-white rounded-lg font-semibold hover:bg-science-800 transition shadow-lg shadow-science-500/25">
+                        Discover More
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-4 bg-white text-science-700 border border-secondary-200 rounded-lg font-semibold hover:bg-science-50 transition">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center">
+                <!-- Abstract Representation of Chemistry -->
+                <div
+                    class="relative w-80 h-80 md:w-96 md:h-96 bg-gradient-to-tr from-science-200 to-white rounded-full flex items-center justify-center shadow-2xl animate-blob">
+                    <!-- Placeholder Image or Illustration -->
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800"
+                        alt="Chemistry Lab Glassware"
+                        class="w-72 h-72 object-cover rounded-full border-4 border-white shadow-lg">
+
+                    <!-- Floating Badge 1 -->
+                    <div
+                        class="absolute top-10 -right-4 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 animate-float-slow">
+                        <div class="bg-orange-100 p-2 rounded-lg text-orange-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Focus</p>
+                            <p class="text-sm font-bold text-slate-800">Precision</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge 2 -->
+                    <div
+                        class="absolute bottom-10 -left-4 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 animate-float-delayed">
+                        <div class="bg-blue-100 p-2 rounded-lg text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Method</p>
+                            <p class="text-sm font-bold text-slate-800">Analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-science-500 font-bold tracking-wider uppercase text-sm mb-2">Who I Am</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">About Jephta</h2>
+                <div class="w-20 h-1 bg-science-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800"
+                        alt="Laboratory Work" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full">
+                </div>
+                <div class="md:w-1/2 space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800">Analytical Chemistry Student</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        I am currently pursuing a major in Analytical Chemistry, driven by a passion for understanding
+                        the composition of matter and how we can measure it with accuracy and precision. My academic
+                        journey has equipped me with both theoretical knowledge and practical laboratory skills.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        My primary interests lie in the intricate details of chemical analysis, ensuring quality and
+                        safety through rigorous scientific methods.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="flex items-center space-x-2 text-slate-700">
+                            <span class="w-2 h-2 bg-science-500 rounded-full"></span>
+                            <span>Wet Chemistry</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-slate-700">
+                            <span class="w-2 h-2 bg-science-500 rounded-full"></span>
+                            <span>Chromatography</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-slate-700">
+                            <span class="w-2 h-2 bg-science-500 rounded-full"></span>
+                            <span>Organic Chemistry</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-slate-700">
+                            <span class="w-2 h-2 bg-science-500 rounded-full"></span>
+                            <span>Spectroscopy</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-slate-700">
+                            <span class="w-2 h-2 bg-science-500 rounded-full"></span>
+                            <span>Inorganic Chemistry</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-slate-700">
+                            <span class="w-2 h-2 bg-science-500 rounded-full"></span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-science-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-science-500 font-bold tracking-wider uppercase text-sm mb-2">My Skills</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Core Expertise</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Specialized techniques and areas of study that form the
+                    foundation of my analytical capabilities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div
+                        class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Beaker Icon -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Wet Chemistry</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Proficiency in classical methods such as
+                        titration, gravimetry, and qualitative analysis.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div
+                        class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Molecule Icon -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Organic & Inorganic</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Understanding reaction mechanisms, synthesis, and
+                        characterization of both organic and inorganic compounds.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div
+                        class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Chart/Graph Icon -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Chromatography</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Separation techniques using HPLC, GC, and TLC to
+                        isolate and identify components in complex mixtures.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div
+                        class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Wave/Light Icon -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Spectroscopy</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Analysis of matter interaction with
+                        electromagnetic radiation using UV-Vis, FTIR, and Atomic Absorption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standardisation Methods Section -->
+    <section id="standards" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-science-500 font-bold tracking-wider uppercase text-sm mb-2">Knowledge Base</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Standardisation Methods</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Standardization is critical in analytical chemistry to
+                    ensure accurate and reproducible results. These are the three fundamental pillars.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Method 1 -->
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-white p-8 rounded-2xl border border-slate-100 h-full flex flex-col">
+                        <div class="text-4xl mb-4">🧪</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Primary Standards</h3>
+                        <p class="text-slate-600 mb-4 flex-grow">
+                            Primary standards are highly pure, stable chemical substances used as the ultimate reference
+                            point. They must have a high molar mass, be non-hygroscopic, and be available in high purity
+                            (e.g., >99.9%).
+                        </p>
+                        <hr class="border-slate-100 my-4">
+                        <p class="text-sm text-slate-500">
+                            <strong>Examples:</strong> Potassium Hydrogen Phthalate (KHP), Sodium Carbonate.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 2 -->
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-white p-8 rounded-2xl border border-slate-100 h-full flex flex-col">
+                        <div class="text-4xl mb-4">⚖️</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Secondary Standards</h3>
+                        <p class="text-slate-600 mb-4 flex-grow">
+                            These refer to solutions whose concentration has been determined by titration against a
+                            primary standard. They are used for routine analysis but require periodic
+                            re-standardization.
+                        </p>
+                        <hr class="border-slate-100 my-4">
+                        <p class="text-sm text-slate-500">
+                            <strong>Examples:</strong> Hydrochloric Acid (HCl), Sodium Hydroxide (NaOH) solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 3 -->
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-white p-8 rounded-2xl border border-slate-100 h-full flex flex-col">
+                        <div class="text-4xl mb-4">💧</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Titrimetric Standardization</h3>
+                        <p class="text-slate-600 mb-4 flex-grow">
+                            The process of determining the exact concentration of a solution by reacting it with a
+                            standard solution. This involves careful addition of titrant until the equivalence point is
+                            reached.
+                        </p>
+                        <hr class="border-slate-100 my-4">
+                        <p class="text-sm text-slate-500">
+                            <strong>Key Concept:</strong> Accuracy depends on precise volume measurement and indicator
+                            selection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Experience Section -->
+    <section id="portfolio" class="py-20 bg-science-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-science-500 font-bold tracking-wider uppercase text-sm mb-2">My Work</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Lab Experience & Projects</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-slate-500 italic">Exploring practical applications of chemistry</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=600"
+                        alt="Lab Experiment"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Water Quality Analysis</h4>
+                        <p class="text-slate-300 text-sm">Determination of hardness and heavy metal content using
+                            complexometric titration.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1628863353691-0071c8c1874c?auto=format&fit=crop&q=80&w=600"
+                        alt="Spectroscopy"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Spectrophotometry</h4>
+                        <p class="text-slate-300 text-sm">Quantitative analysis of food dyes using UV-Vis spectroscopy
+                            and Beer-Lambert law.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600"
+                        alt="Titration"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Acid-Base Standardization</h4>
+                        <p class="text-slate-300 text-sm">Preparation and standardization of secondary standards for
+                            laboratory use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-science-900 rounded-3xl p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
+                <!-- Decorative Circle -->
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-science-800 rounded-full opacity-50">
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 relative z-10">Let's Collaborate</h2>
+                <p class="text-science-100 mb-10 text-lg relative z-10">
+                    Interested in discussing analytical methods, research, or potential projects? I'd love to hear from
+                    you.
+                </p>
+
+                <form id="contact-form" class="space-y-4 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" id="name" placeholder="Name"
+                            class="w-full px-5 py-3 rounded-lg bg-science-800 border border-science-700 text-white placeholder-science-400 focus:outline-none focus:ring-2 focus:ring-science-400">
+                        <input type="email" id="email" placeholder="Email"
+                            class="w-full px-5 py-3 rounded-lg bg-science-800 border border-science-700 text-white placeholder-science-400 focus:outline-none focus:ring-2 focus:ring-science-400">
+                    </div>
+                    <textarea id="message" placeholder="Message" rows="4"
+                        class="w-full px-5 py-3 rounded-lg bg-science-800 border border-science-700 text-white placeholder-science-400 focus:outline-none focus:ring-2 focus:ring-science-400"></textarea>
+                    <button type="submit" id="submit-btn"
+                        class="w-full py-3 bg-white text-science-900 font-bold rounded-lg hover:bg-science-50 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                        Send Message
+                    </button>
+                    <!-- Status Message Holder -->
+                    <div id="status-message" class="hidden text-sm font-medium mt-2 p-3 rounded"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold text-slate-900 tracking-tight">JEPHTA<span
+                        class="text-science-500">.</span></span>
+                <p class="text-sm text-slate-500 mt-1">Analytical Chemistry Major</p>
+            </div>
+
+            <div class="flex space-x-6 mb-4 md:mb-0">
+                <!-- Social placeholders -->
+                <a href="#" class="text-slate-400 hover:text-science-600 transition">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-science-600 transition">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+
+            <p class="text-sm text-slate-400">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> Jephta Mutashi. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        /* Animation utilities */
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        @keyframes float-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float-slow {
+            animation: float-slow 5s ease-in-out infinite;
+        }
+
+        @keyframes float-delayed {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float-delayed {
+            animation: float-delayed 5s ease-in-out 2.5s infinite;
+        }
+    </style>
+</body>
+
+</html>
